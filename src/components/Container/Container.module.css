@@ -5,5 +5,5 @@
     margin-right: auto;
     padding: 15px;
     margin-top: 20px;
-    border: 1px solid black;
+    box-shadow: 0 0 8px rgb(0 0 0 / 15%);
   }

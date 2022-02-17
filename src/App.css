@@ -1,0 +1,43 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  padding: 10px;
+}
+
+input {
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 5px;
+  box-shadow: 0 0 8px rgb(0 0 0 / 15%);
+}
+.inputSearch {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.hero {
+  border-bottom: 1px solid black;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 15px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.sexWrapper {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.sex {
+  display: flex;
+  align-items: center;
+  border: none;
+  box-shadow: none;
+}

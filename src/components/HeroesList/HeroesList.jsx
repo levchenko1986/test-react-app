@@ -1,34 +1,20 @@
-import PropTypes from "prop-types";
-// import { name, lastname, age, sex } from "../heroes.json";
-// import axios from "axios";
 import styles from "./HeroesList.moule.css";
+import React from "react";
 
-const HeroesList = ({ getHeroes, getHeroes1 }) => {
+const HeroesList = (props) => {
   return (
-    <ul className={styles.list}>
-      {getHeroes.map(({ name, lastname, age, sex }) => {
-        
-        return (
-          <li className={styles.item} key={name.toString()}>
-            <p>{name} {lastname}</p>
-            <p>Возраст: {age}</p>
-            <p>Пол: {sex === 'm' ? 'мужской' : 'женский'}</p>
-          </li>
-        );
-      })}
-    </ul>
+    <>
+      {props.data.map((hero) => (
+        <li className={styles.item}>
+          <p>
+            {hero.name} {hero.lastname}
+          </p>
+          <p>Возраст: {hero.age}</p>
+          <p>Пол: {hero.sex === "m" ? "мужской" : "женский"}</p>
+        </li>
+      ))}
+    </>
   );
-};
-
-HeroesList.propTypes = {
-    getHeroes: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string,
-      lastname: PropTypes.string,
-      age: PropTypes.number,
-      sex: PropTypes.string,
-    })
-  ),
 };
 
 export default HeroesList;
